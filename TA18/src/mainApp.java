@@ -1,14 +1,14 @@
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import Connection.ConnectDB;
+import Ejercicio4.Ejercicio4;
 public class mainApp {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		 
-		ConnectDB aux = new ConnectDB();
-		aux.create_connection();
-		aux.createDB("Ejemplo1");
+		Ejercicio4 aux = new Ejercicio4();
+		aux.ejercicio4();
 	}
 
 }

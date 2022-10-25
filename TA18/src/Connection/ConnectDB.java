@@ -65,7 +65,6 @@ public class ConnectDB {
 				String Query = "CREATE DATABASE " + name;
 				Statement st = connect.createStatement();
 				st.executeUpdate(Query);
-				closeConnection();
 				//MySQLConnection();
 				JOptionPane.showMessageDialog(null," Created database " + name + "successfully ");
 			} catch (SQLException ex) {
