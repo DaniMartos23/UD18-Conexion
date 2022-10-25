@@ -17,7 +17,9 @@ public class ConnectDB {
 		
 	private Connection connect;
 	
-	
+	public ConnectDB() {
+		
+	}
 	
 	private String[] readData() throws FileNotFoundException {
         // Método que lee los datos de un txt. text[0]=URL, text[1]=name, text[2]=password
@@ -58,13 +60,12 @@ public class ConnectDB {
 			}
 		}
 		
-		public void createDB(String name) {
+		public void createDB(String name) throws FileNotFoundException {
 			try {
 				String Query = "CREATE DATABASE " + name;
 				Statement st = connect.createStatement();
 				st.executeUpdate(Query);
 				closeConnection();
-				//AQUI LLAMAMOS A LA FUNCION DE CONEXION
 				//MySQLConnection();
 				JOptionPane.showMessageDialog(null," Created database " + name + "successfully ");
 			} catch (SQLException ex) {
