@@ -34,10 +34,15 @@ public class ConnectDB {
 				st.executeUpdate(Query);
 				closeConnection();
 				//AQUI LLAMAMOS A LA FUNCION DE CONEXION
+				//MySQLConnection();
 				JOptionPane.showMessageDialog(null," Created database " + name + "successfully ");
 			} catch (SQLException ex) {
 				Logger.getLogger(ConnectDB.class.getName(), null).log(Level.SEVERE,null,ex);
 			}
+		}
+		
+		public void createTable(String db, String name) {
+			
 		}
 		
 		
