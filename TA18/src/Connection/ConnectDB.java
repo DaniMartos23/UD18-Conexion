@@ -68,7 +68,7 @@ public class ConnectDB {
 				//MySQLConnection();
 				JOptionPane.showMessageDialog(null," Created database " + name + "successfully ");
 			} catch (SQLException ex) {
-				Logger.getLogger(ConnectDB.class.getName(), null).log(Level.SEVERE,null,ex);
+				System.out.println("We can't create DB");
 			}
 		}
 		
@@ -82,6 +82,17 @@ public class ConnectDB {
 			st.executeUpdate(query);
 			System.out.println("Table created");
 			
+		}
+		
+		public void insertData(String db, String query) throws SQLException {
+			String Querydb= "USE "+db+";";
+			Statement stdb = connect.createStatement();
+			stdb.executeUpdate(Querydb);
+			
+			Statement st = connect.createStatement();
+			st.executeUpdate(query);
+			
+			System.out.println("Inserted data complete!");
 		}
 		
 		
