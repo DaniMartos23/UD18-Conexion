@@ -73,7 +73,15 @@ public class ConnectDB {
 			}
 		}
 		
-		public void createTable(String db, String name) {
+		public void createTable(String db, String query) throws SQLException {
+			
+			String Querydb = "USE "+db+";";
+			Statement stdb= connect.createStatement();
+			stdb.executeUpdate(Querydb);
+			
+			Statement st = connect.createStatement();
+			st.executeUpdate(query);
+			System.out.println("Table created");
 			
 		}
 		
