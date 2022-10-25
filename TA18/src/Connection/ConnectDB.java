@@ -1,4 +1,8 @@
 package Connection;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,11 +16,38 @@ import java.sql.DriverManager;
 public class ConnectDB {
 		
 	private Connection connect;
+	
+	
+	
+	private String[] readData() throws FileNotFoundException {
+        // Método que lee los datos de un txt. text[0]=URL, text[1]=name, text[2]=password
+        String[] text= new String[3];
+        FileReader file = new FileReader("src/conection.txt");
+        BufferedReader buffer = new BufferedReader(file);
+        try {
+            text[0]=buffer.readLine();
+            text[1]=buffer.readLine();
+            text[2]=buffer.readLine();
+        } catch (IOException e) {
+            // Si no hay archivo error
+            e.printStackTrace();
+        }
+        return text;
+    }
 		
 		
-		public void create_connection() {
-			
-		}
+	public void create_connection() throws FileNotFoundException {
+        String[] data=readData();
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connect=DriverManager.getConnection(data[0],data[1],data[2]);
+            System.out.println("Server connected");
+        }catch(SQLException|ClassNotFoundException ex) {
+            System.out.println("No se ha podido conectar con la base de datos");
+            System.out.println(ex);
+        }
+
+    }
 		
 		public void closeConnection() {
 			try {
