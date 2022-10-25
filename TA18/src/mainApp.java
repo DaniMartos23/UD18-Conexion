@@ -3,6 +3,7 @@ import java.sql.SQLException;
 import Connection.ConnectDB;
 import Ejercicio4.Ejercicio4;
 import Ejercicio6.Ejercicio6;
+import Ejercicio7.Ejercicio7;
 public class mainApp {
 
 	public static void main(String[] args) throws FileNotFoundException, SQLException {
@@ -11,8 +12,11 @@ public class mainApp {
 		//Ejercicio4 aux = new Ejercicio4();
 		//aux.ejercicio4();
 		
-		Ejercicio6 aux1 = new Ejercicio6();
-		aux1.ejercicio6();
+		//Ejercicio6 aux1 = new Ejercicio6();
+		//aux1.ejercicio6();
+		
+		//Ejercicio7 aux2 = new Ejercicio7();
+		//aux2.ejercicio7();
 	}
 
 }
