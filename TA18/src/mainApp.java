@@ -17,6 +17,7 @@ public class mainApp {
 		
 		Ejercicio8 aux2 = new Ejercicio8();
 		aux2.ejercicio8();
+		
 	}
 
 }

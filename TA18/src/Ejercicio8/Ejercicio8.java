@@ -1,4 +1,3 @@
-package Ejercicio7;
 package Ejercicio8;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
