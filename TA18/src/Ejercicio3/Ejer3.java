@@ -1,5 +1,8 @@
 package Ejercicio3;
 import java.io.FileNotFoundException;
+import java.sql.SQLException;
+
+import Connection.ConnectDB;
 public class Ejer3{
 	
 	public void ejercicio3() throws FileNotFoundException, SQLException {	
