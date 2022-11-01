@@ -6,7 +6,7 @@ import Connection.ConnectDB;
 
 public class ejercicio2App {
 
-	public static void ejecutaEjercicio() throws FileNotFoundException, SQLException {
+	public void ejercicio2() throws FileNotFoundException, SQLException {
 		ConnectDB aux = new ConnectDB();
 		aux.create_connection();
 		aux.createDB("Ejercicio2");

@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import Connection.ConnectDB;
 
 public class ejercicio7App {
-	public static void ejecutaEjercicio() throws FileNotFoundException, SQLException {
+	public void ejercicio7() throws FileNotFoundException, SQLException {
 		ConnectDB aux = new ConnectDB();
 		aux.create_connection();
 		aux.createDB("Ejercicio7");
